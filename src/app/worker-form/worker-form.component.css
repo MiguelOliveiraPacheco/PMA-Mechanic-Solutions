@@ -1,37 +1,61 @@
 .form-container {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(15, 13, 13, 0.307);
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
   form div {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
   
   label {
     display: block;
+    margin-top: 7px;
     margin-bottom: 5px;
-    color: #333;
+    color: #ffffff;
   }
   
   input {
-    width: 100%;
-    padding: 8px;
+    width: 96%;
+    padding: 7px;
+    padding-right: 0px;
     border-radius: 4px;
     border: 1px solid #ccc;
+    box-shadow: 0px 0.01em 0.01em rgb(45 35 66 / 40%), 0px 0.3em 0.7em -0.01em rgb(45 35 66 / 30%), inset 0px -0.01em 0px rgb(58 65 111 / 50%);
   }
-  
+
+  /*Botão form*/
   button {
-    padding: 10px 20px;
-    background-color: #ff4500;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
+    margin-bottom: 7px;
+    margin-top: 15px;
+    font-size: 18px;
+    display: inline-block;
+    outline: 0;
+    border: 0;
     cursor: pointer;
+    will-change: box-shadow,transform;
+    background: radial-gradient( 100% 100% at 100% 0%, #e59f49 0%, #bf5305 100% );
+    box-shadow: 0px 0.01em 0.01em rgb(45 35 66 / 40%), 0px 0.3em 0.7em -0.01em rgb(45 35 66 / 30%), inset 0px -0.01em 0px rgb(58 65 111 / 50%);
+    padding: 0 2em;
+    border-radius: 0.3em;
+    color: #fff;
+    font-weight: bold;
+    height: 2.6em;
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
   }
   
-  button:disabled {
-    background-color: #ccc;
+  button:hover {
+    box-shadow: 0px 0.1em 0.2em rgb(45 35 66 / 40%), 0px 0.4em 0.7em -0.1em rgb(45 35 66 / 30%), inset 0px -0.1em 0px #a54801;
+    transform: translateY(-0.1em);
   }
   
+  button:active {
+    box-shadow: inset 0px 0.1em 0.6em #ff9c2b;
+    transform: translateY(0em);
+  }

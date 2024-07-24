@@ -1,5 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { WorkerService } from '../worker.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-worker-table',
@@ -8,6 +10,12 @@ import { CommonModule } from '@angular/common';
   templateUrl: './worker-table.component.html',
   styleUrls: ['./worker-table.component.css']
 })
-export class WorkerTableComponent {
-  @Input() workers: Array<{ name: string; position: string; photo: string }> = [];
+export class WorkerTableComponent implements OnInit {
+  workers$!: Observable<Array<{ name: string; position: string; photo: string }>>;
+  
+  constructor(private workerService: WorkerService) {}
+
+  ngOnInit() {
+    this.workers$ = this.workerService.workers$;
+  }
 }

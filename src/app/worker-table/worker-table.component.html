@@ -8,7 +8,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let worker of workers">
+        <tr *ngFor="let worker of workers$ | async">
           <td><img [src]="worker.photo || 'https://via.placeholder.com/50'" alt="Foto do Trabalhador" /></td>
           <td>{{ worker.name }}</td>
           <td>{{ worker.position }}</td>

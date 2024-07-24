@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { WorkerService } from '../worker.service';
 
 @Component({
   selector: 'app-worker-form',
@@ -10,9 +11,8 @@ import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angula
 })
 export class WorkerFormComponent {
   workerForm: FormGroup;
-  workers: Array<{ name: string; position: string; photo: string }> = [];
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private workerService: WorkerService) {
     // Criação do formulário com validações
     this.workerForm = this.fb.group({
       name: ['', Validators.required],
@@ -23,7 +23,7 @@ export class WorkerFormComponent {
 
   onSubmit() {
     if (this.workerForm.valid) {
-      this.workers.push(this.workerForm.value);
+      this.workerService.addWorker(this.workerForm.value);
       this.workerForm.reset();
     }
   }

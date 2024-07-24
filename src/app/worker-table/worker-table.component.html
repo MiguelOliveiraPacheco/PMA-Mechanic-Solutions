@@ -1,0 +1,19 @@
+<div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Foto</th>
+          <th>Nome</th>
+          <th>Posição</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let worker of workers">
+          <td><img [src]="worker.photo || 'https://via.placeholder.com/50'" alt="Foto do Trabalhador" /></td>
+          <td>{{ worker.name }}</td>
+          <td>{{ worker.position }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

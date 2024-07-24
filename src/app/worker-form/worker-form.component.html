@@ -1,0 +1,18 @@
+<div class="form-container">
+    <form [formGroup]="workerForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="name">Nome:</label>
+        <input id="name" formControlName="name" required />
+      </div>
+      <div>
+        <label for="position">Posição:</label>
+        <input id="position" formControlName="position" required />
+      </div>
+      <div>
+        <label for="photo">Foto (URL):</label>
+        <input id="photo" formControlName="photo" />
+      </div>
+      <button type="submit" [disabled]="!workerForm.valid">Adicionar Trabalhador</button>
+    </form>
+  </div>
+  

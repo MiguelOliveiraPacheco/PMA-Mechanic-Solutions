@@ -1,0 +1,36 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow:hidden;
+  height: 100%;
+}  
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #000000, #ff5e00);
+    height: 100vh;
+    padding: 20px;
+    color: #ffffff;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  img {
+    position: absolute;
+    top: 35px;
+    left: 20px;
+    width: 370px;
+    z-index: 1000;
+  }
+  

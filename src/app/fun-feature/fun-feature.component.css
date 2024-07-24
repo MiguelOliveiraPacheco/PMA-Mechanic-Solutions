@@ -5,7 +5,7 @@
     padding: 30px;
     width: 250px;
     height: 140px;
-    background-color: rgba(0, 0, 0, 0.786);
+    background-color: rgba(0, 0, 0, 0.644);
     border-radius: 15px;
     text-align: center;
     display: flex;
@@ -28,7 +28,7 @@ p {
 
 /*Botão contador*/
 .button {
-  --😀: #b64c00;
+  --😀: #d85d05;
   --😀😀: #733400;
   --😀😀😀: #e8ae613b;
   cursor: pointer;
